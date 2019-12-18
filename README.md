@@ -1,5 +1,5 @@
-Poky Container
-========================
+Poky Container for Openvario Build
+==================================
 This repo is to create an image that is able to run bitbake/poky. The main
 difference between it and https://github.com/crops/yocto-dockerfiles is that
 it has helpers to create users and groups within the container. This is so that
