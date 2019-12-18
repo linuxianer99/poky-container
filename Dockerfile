@@ -24,6 +24,9 @@ ADD https://raw.githubusercontent.com/crops/extsdk-container/master/restrict_use
 COPY distro-entry.sh poky-entry.py poky-launch.sh /usr/bin/
 COPY sudoers.usersetup /etc/
 
+RUN apt-get update &&\
+	apt-get install -y  python-dev
+
 # For ubuntu, do not use dash.
 RUN which dash &> /dev/null && (\
     echo "dash dash/sh boolean false" | debconf-set-selections && \
