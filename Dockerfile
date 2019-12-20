@@ -13,7 +13,8 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-FROM crops/yocto:ubuntu-16.04-base
+#FROM crops/yocto:ubuntu-16.04-base
+FROM crops/yocto:ubuntu-18.04-base
 
 USER root
 
@@ -25,7 +26,7 @@ COPY distro-entry.sh poky-entry.py poky-launch.sh /usr/bin/
 COPY sudoers.usersetup /etc/
 
 RUN apt-get update &&\
-	apt-get install -y  python-dev
+	apt-get install -y  python-dev imagemagick ffmpeg
 
 # For ubuntu, do not use dash.
 RUN which dash &> /dev/null && (\
