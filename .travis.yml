@@ -33,13 +33,13 @@ before_install:
 script:
   - ./build-and-test.sh
 
-after_success:
-  - bash deploy.sh
+#after_success:
+#  - bash deploy.sh
 
-notifications:
-  email:
-    recipients:
-      - brian.avery@intel.com
-      - randy.e.witt@intel.com
-    on_success: change
-    on_failure: always
+#notifications:
+#  email:
+#    recipients:
+#      - brian.avery@intel.com
+#      - randy.e.witt@intel.com
+#    on_success: change
+#    on_failure: always
